@@ -3,19 +3,90 @@
     <head>
         <title>Web Colors</title>
         <style>
-
+            body {
+                font-family: verdana;
+            }
+            section{
+                border: solid 1px black;
+                margin: 1rem 0 1rem 0;
+            }
+            li{
+                padding:0.5rem;
+            }
+            .red{
+                background-color: red;
+            }
+            .green{
+                background-color: green;
+            }
+            .blue{
+                background-color: blue;
+            }
+            .crimson{
+                background-color: crimson;
+            }
+            .firebrick{
+                background-color: firebrick;
+            }
+            .salmon{
+                background-color: salmon;
+            }
+            .olive{
+                background-color: olive;
+            }
+            .mediumseagreen{
+                background-color: mediumseagreen;
+            }
+            .dodgerblue{
+                background-color: dodgerblue;
+            }
+            .powderblue{
+                background-color: powderblue;
+            }
+            .special{
+                border: solid 3px black;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
         <h1>Web Colors</h1>
+
         <section>
             <h2>Basic Web Colors</h2>
             <ul>
-               <li>Red</li>
-               <li>Green</li>
-               <li>Blue</li>
+               <li class='red'>Red</li>
+               <li class='green'>Green</li>
+               <li class='blue'>Blue</li>
             </ul>
-
         </section>
+
+        <section>
+            <h2>Extended Red Colors</h2>
+            <ul>
+               <li class='crimson'>Crimson</li>
+               <li class='firebrick'>FireBrick</li>
+               <li class='salmon'>Salmon</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Extended Green Colors</h2>
+            <ul>
+                <!-- have 2 classes -->
+               <li class='olive special'>Olive</li>
+               <li class='mediumseagreen'>MediumSeaGreen</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Extended Blue Colors</h2>
+            <ul>
+               <li class='dodgerblue'>DodgerBlue</li>
+               <li class='powderblue'>PowderBlue</li>
+            </ul>
+        </section>
+
     </body>
 </html>

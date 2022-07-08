@@ -1,0 +1,28 @@
+/* default: content-box;
+border-box includes border and padding 
+apply to every element */
+* {
+    box-sizing: border-box;
+  }
+   /* calc, do the calculation; 2rem = margin 1rem *2 
+  float is not commonly used; flex box can solve the issue */
+  div > div {
+    width: calc(50% - 2rem);
+    background-color: dodgerBlue;
+    height:10rem;
+    float: left;
+    padding: 1rem;
+    border: solid 2px black;
+    margin: 1rem;
+  }
+  
+  /* first-child
+     last-child
+    CSS pseudo-class 
+  */
+  
+  div > div:last-child {
+    background-color: tomato;
+  }
+ 
+  
