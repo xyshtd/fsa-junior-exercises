@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Nav Bar</title>
+        <style>
+            body {
+                font-family: verdana;
+            }
+            /* nav is the container */
+            nav {
+                background-color: dodgerBlue;
+                padding: 2rem 0;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                
+                
+            }
+            nav a {
+                color: cornSilk;
+                text-decoration: none;
+            }
+
+            nav a.selected{
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            #home-link{
+                font-size: 2rem;
+            }
+
+            @media (max-width: 600px){
+                nav {
+                    flex-direction: column;
+                    padding:1rem;
+                }
+                nav a{
+                    padding:1rem;
+                }
+            }
+        </style>
+    <body>
+        <nav>
+               <a href='#' id='home-link'>Home</a>
+               <a href='#'>About</a>
+               <a href='#' class='selected'>Products</a>
+               <a href='#'>Contact Us</a>
+        </nav>
+
+    </body>
+</html>

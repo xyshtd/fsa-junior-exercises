@@ -1,6 +1,6 @@
 /* default: content-box;
 border-box includes border and padding 
-apply to every element */
+* apply to every element */
 * {
     box-sizing: border-box;
   }
@@ -20,7 +20,7 @@ apply to every element */
      last-child
     CSS pseudo-class 
   */
-  
+
   div > div:last-child {
     background-color: tomato;
   }

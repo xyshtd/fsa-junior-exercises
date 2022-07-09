@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flex Wrap</title>
+        <style>
+            container{
+                display:flex;
+                justify-content:space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                height: 1vh;
+                align-content: flex-start;    
+            
+            }
+            container div{
+                background-color: tomato;
+                margin:1rem;
+            }
+            .sm{
+                width:2rem;
+                height:2rem;
+            }
+
+            .md{
+                width:3rem;
+                height:3rem;
+            }
+            .lg{
+                width:4rem;
+                height:4rem;
+            }
+
+        </style>
+    <body>
+        <container>
+               <div class='lg'></div>
+               <div class='sm'></div>
+               <div class='md'></div>
+               <div class='md'></div>
+               <div class='md'></div>
+               <div class='lg'></div>
+        </container>
+
+    </body>
+</html>
