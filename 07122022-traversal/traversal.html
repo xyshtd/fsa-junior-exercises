@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Traversal</title>
+  </head>
+  <body>
+    <h1 id='foo'>The DOM</h1>
+    <ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three <span><a>!!!</a></span></li>
+    </ul>
+    <script>
+      const flatten = (el, result)=> {
+        result.push(el.tagName);
+        [...el.children].forEach( child => {
+          flatten(child, result);
+        });
+        return result;
+      }
+
+      console.log(flatten(document.querySelector('body'), []));
+    </script>
+  </body>
+</html>

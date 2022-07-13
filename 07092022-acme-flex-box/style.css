@@ -1,0 +1,198 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    color: grey;
+    font-family: sans-serif;
+    margin:0;
+
+}
+
+/* header */
+header{
+    background-color: dodgerblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.title{
+    flex:1;
+    font-size:1.5rem;
+    margin:0;
+}
+
+nav{
+    flex:3;
+    display: flex;
+    justify-content:space-around;
+}
+
+nav a{
+    text-decoration: none;
+    color:white;
+    font-size:1rem;
+}
+
+nav a:hover{
+    color:orange;
+    transition: all 0.5s;
+}
+
+.special-nav{
+    font-weight: 600;
+}
+
+/* user create */
+#user-create{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+h1{
+    font-size: 1.5rem;
+    margin: 1rem; 
+    align-self: flex-start;
+}
+
+form{ 
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 0 1.5rem 0;
+    
+}
+
+label{
+    width: 20%;
+    float: left;
+    margin: 1rem 0 0 1rem;
+    font-size: 0.9rem;
+}
+
+input,select{
+    width: 70%;
+    float: left;
+    margin: 1rem 0 0 0;
+   }
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+button{
+    padding: 0.2rem 2rem;
+    margin: 0.2rem;
+}
+#save{
+    color: white;
+    background-color: dodgerblue;
+}
+
+/* user cards */
+
+#user-cards{
+    display: flex;
+    flex-wrap:wrap ;
+    text-align: center;
+    justify-content: center;  
+}
+
+#user-cards div{ 
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(33% - 2rem);
+}
+
+p.user-name{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* 768px */
+
+@media (max-width:768px){
+   .title{
+    font-size: 1.2rem;
+   }
+
+    form{ 
+    width: calc(70vw - 2rem);
+    flex-wrap: wrap;
+    }
+
+    label {
+        width: 90%;
+        margin: 0 1rem;
+    }
+    
+    input,select {
+        width: 90%;
+        margin: 0.5rem 1rem 1rem 1rem;
+       }
+    
+       #user-cards div {
+        flex: 0 0 calc(50% - 2rem);
+    }
+}
+
+
+/* 480px */  
+@media (max-width:480px){
+    #user-cards div {
+        flex: 0 0 calc(100% - 2rem);
+    }
+
+    header{
+        flex-direction:column;
+        align-items:flex-start ;
+        padding: 1rem;
+        
+    }
+    nav{
+        flex-direction:column;
+        margin: 0.5rem 0;
+        }
+
+    nav a{
+        margin: 0.5rem 0;
+    }
+
+    form{ 
+    width: calc(100vw - 2rem);
+    flex-wrap: wrap;
+    }
+
+    label {
+        width: 90%;
+        margin: 0 1rem;
+    }
+    
+    input,select {
+        width: 90%;
+        margin: 0.5rem 1rem 1rem 1rem;
+       }
+
+
+    .buttons{
+        padding: 0 1rem;
+        flex-direction:column;
+    }
+
+    #save{
+        margin-top: 1rem;
+    }
+}
+
