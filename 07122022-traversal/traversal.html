@@ -10,6 +10,7 @@
       <li>three <span><a>!!!</a></span></li>
     </ul>
     <script>
+      //recursion
       const flatten = (el, result)=> {
         result.push(el.tagName);
         [...el.children].forEach( child => {
