@@ -1,0 +1,317 @@
+/* 
+ * Some Default Styles are provided for your convenience. 
+ * You can start adding your own CSS below line 60.
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+p {
+  color: #252525;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+h1, h2, h3, nav {
+  font-family: "Saira Extra Condensed", sans-serif;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Default section styling */
+section {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+section h2 {
+  text-align: center;
+  position: relative;
+  margin: 60px 0;
+}
+section h2:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  width: 60px;
+  height: 1px;
+  background-color: #f39c12;
+  left: 50%;
+  margin-left: -30px;
+}
+
+/* Header defaults */
+header {
+  background-color: rgba(37, 37, 37, 0.8);
+}
+
+/* 
+ * YOUR CSS:
+ */
+/*Header*/
+header {
+  position: fixed;
+  z-index: 1;
+  width: calc(100% - 30px);
+  margin: 0 15px;
+  display: flex;
+  border-radius: 0 0 1rem 1rem;
+  transform: translateY(-4em);
+  transition: transform 0.5s;
+}
+
+header.active {
+  transform: translateY(0);
+}
+
+.logo {
+  flex:2;
+}
+
+.logo img{
+  height: 2rem;
+  padding: 5px 20px;
+}
+
+nav {
+  flex: 1;
+  display:flex;
+  justify-content: space-around;
+}
+nav a{
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color:orange;
+  transition: all 1s;
+}
+
+/*Carousel*/
+#carousel-text {
+  position: absolute;
+  top: 2rem;
+  text-align: center;
+  color:white;
+  width:100%;
+  text-shadow: 3px 3px black;
+}
+
+.carousel-image{
+  width:100vw;
+  height:100vh;
+  
+}
+
+ /*About*/
+ #about > div{
+  display:flex;
+ }
+
+ #about p {
+  flex: 3;
+  padding: 1rem;
+}
+#about #aboutmockup {
+  flex: 2;
+}
+
+
+
+
+/*Staff*/
+#staff > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.staff-profile {
+  padding: 1rem;
+  display: flex;
+  flex: 0 0 33%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.em {
+  width: 3rem;
+  height: 3rem;
+}
+
+.staff-bio {
+  text-align: center;
+  font-style: italic;
+}
+
+/* Media Query */
+
+@media (max-width:760px){
+  .staff-profile {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width:480px){
+  .staff-profile {
+    flex: 0 0 100%;
+  }
+  
+  nav{
+    flex-direction:column;
+  }
+}
+
+
+/* Identify which boxes will serve as containers (with Display: flex), and which boxes are flex-items (can be both)*/
+
+/* properties following 'display: flex' for containers
+
+justify-content:
+align horizontally
+• flex-start: Items align to the left side of the container.
+• flex-end: Items align to the right side of the container.
+• center: Items align at the center of the container.
+• space-between: Items display with equal spacing between them.
+• space-around: Items display with equal spacing around them.
+
+align-items:
+align vertically
+determines how the items as a whole are aligned within the container
+• flex-start: Items align to the top of the container.
+• flex-end: Items align to the bottom of the container.
+• center: Items align at the vertical center of the container.
+• baseline: Items display at the baseline of the container.
+• stretch: Items are stretched to fit the container.
+
+align-content:
+align vertically
+Set how multiple lines are spaced apart from each other.
+• flex-start: Lines are packed at the top of the container.
+• flex-end: Lines are packed at the bottom of the container.
+• center: Lines are packed at the vertical center of the container.
+• space-between: Lines display with equal spacing between them.
+• space-around: Lines display with equal spacing around them.
+• stretch: Lines are stretched to fit the container.
+
+flex-direction:
+defines the direction items are placed in the container
+• row: Items are placed the same as the text direction.
+• row-reverse: Items are placed opposite to the text direction.
+• column: Items are placed top to bottom.
+• column-reverse: Items are placed bottom to top.
+
+flex-wrap: 
+spread items out to single/additional lines
+• nowrap: Every item is fit to a single line.
+• wrap: Items wrap around to additional lines.
+• wrap-reverse: Items wrap around to additional lines in reverse.
+
+flex-flow:
+combines flex-direction and flex-wrap
+.pond{
+display: flex;
+flex-flow: column wrap;
+}
+*/
+
+/* properties for items
+order:
+apply the order property to individual item
+• By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).
+
+align-self:
+apply to individual item, align vertically, overrides align-items value;
+• accepts the same values as align-items
+
+Flex: flex-grow(0)   flex-shrink(1; optional)  flex-basis(Auto; optional)
+flex: 0 0 33%
+• flex-grow:  specifies how much the item will grow relative to the rest of the flexible items inside the same container
+• flex-shrink: specifies how the item will shrink relative to the rest of the flexible items inside the same container.
+• flex-basis: specifies the initial size of a flexible item
+
+Position: 
+{ position: absolute;
+top: 20rem; }
+• static: Default value. Elements render in order, as they appear in the document flow
+• absolute: positioned relative to its first positioned (not static) ancestor element
+  o Top:   Right:  Left:   Bottom:
+• Fixed: positioned relative to the browser window
+• Relative: positioned relative to its normal position
+• Sticky: positioned based on the user's scroll position
+• Initial: Sets this property to its default value.
+• Inherit: Inherits this property from its parent element.
+
+z-index: specifies the stack order of an element.
+{ z-index: 1;}
+
+border-radius: top-left   top-right corner   bottom-right   bottom-left
+{border-radius: 0 0 1rem 1rem}
+
+text-shadow: offset-x	offset-y		blur-radius(optional)	color(optional)
+text-shadow: 1px 1px 2px black;
+create a plain border around some text (without shadows), e.g.
+{color: coral;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+
+a:  Link-related pseudo class selectors
+nav a:hover{
+  color:orange;
+  transition: color 1s;
+}
+• a:link    Selects all unvisited links
+• a:visited Selects all visited links
+• a:hover Selects links on mouse over
+• a:active  Selects the active link
+
+transition: property  duration   timing-function(optional)   delay(optional)
+shorthand e.g. {transition: all 0s ease 0s} 
+• transition-property
+• transition-duration
+• transition-timing-function
+• transition-delay
+
+transform: 
+• translate(x,y)
+• translateY(-4em)
+• rotate(20deg)
+• skewX(20deg)
+• scale(1.5, 0.5)
+
+
+viewport units:
+{width: 100vw;
+height: 10vh;
+}
+
+• Viewport Width (vw) – A percentage of the full viewport width.
+• Viewport Height (vh) – A percentage of the full viewport height. 10vh will resolve to 10% of the current viewport height.
+• Viewport Minimum (vmin) – A percentage of the viewport width or height, whichever is smaller
+• Viewport Maximum (vmax) – A percentage of the viewport width or height, whichever is larger.
+
+Breakpoints for Responsive Web Design
+• 320px — 480px: Mobile devices
+• 481px — 768px: iPads, Tablets
+• 769px — 1024px: Small screens, laptops
+• 1025px — 1200px: Desktops, large screens
+• 1201px and more —  Extra large screens, TV 
+
+*/
