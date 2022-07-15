@@ -34,16 +34,23 @@ main div {
     <h1>The Counter is <span>0</span></h1>
     <main>
     </main>
+
     <script>
+      //setInterval(callbackfunc, delay, arg0, arg1, /* ... ,*/ argN)
+      //repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.
       const interval = setInterval(()=> {
         const span = document.querySelector('h1 > span');
+        //HTMLElement.innerText   represents the rendered/plain string of a node and its descendants
+        //cohert string to number
         span.innerText = span.innerText*1 + 1;
         const main = document.querySelector('main');
         const div = document.createElement('div');
         div.classList.add('sm');
         main.appendChild(div);
         if(main.children.length === 10){
+          //clearInterval(intervalID)
           clearInterval(interval);
+          //setTimeout(functionRef, delay, param1, param2, /* ... ,*/ paramN) sets a timer which executes a function or specified piece of code once the timer expires
           setTimeout(()=> {
              [...main.children].forEach( item => {
                item.parentNode.removeChild(item);
@@ -51,6 +58,8 @@ main div {
           }, 500); 
         }
       }, 1000);
+      
     </script>
+
   </body>
 </html>

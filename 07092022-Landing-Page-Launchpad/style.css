@@ -74,7 +74,7 @@ header {
   margin: 0 15px;
   display: flex;
   border-radius: 0 0 1rem 1rem;
-  transform: translateY(-4em);
+  transform: translateY(-6em);
   transition: transform 0.5s;
 }
 
@@ -107,19 +107,31 @@ nav a:hover{
 }
 
 /*Carousel*/
+#carousel {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
 #carousel-text {
   position: absolute;
-  top: 2rem;
-  text-align: center;
-  color:white;
-  width:100%;
-  text-shadow: 3px 3px black;
+  top: 20vh;
+  color: #fff;
+  text-shadow: 2px 2px #252525;
+  z-index: 1;
 }
 
-.carousel-image{
-  width:100vw;
-  height:100vh;
-  
+.carousel-image {
+  position: absolute;
+  display: block;
+  margin: auto;
+  min-width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 3s;
+}
+
+.carousel-image.hidden {
+  opacity: 0;
 }
 
  /*About*/
@@ -201,6 +213,8 @@ determines how the items as a whole are aligned within the container
 • center: Items align at the vertical center of the container.
 • baseline: Items display at the baseline of the container.
 • stretch: Items are stretched to fit the container.
+
+* vertical-align: (in-line blocks only)
 
 align-content:
 align vertically
