@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
+
+html {
+  background-color: #222;
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* your CSS below! */
+
+td {
+  height: 50px;
+  width: 50px;
+  background-color: lightgray;
+}
+
+div{
+  display: flex;
+  margin:10px;
+  justify-content:center;
+}
+
+label{
+  margin:0 0 0 20px;
+}
+#custom{
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  background-color: grey;
+}
+input{
+  width: 50px;
+  height: 25px;
+}
+#create-board{
+  margin: 0 50px;
+  text-transform: uppercase;
+}
+
+button{
+  margin: 5px 10px;
+  padding: 2px 0 0 0;
+}
+
+select{
+  color:white;
+  background-color: red;
+}
+
+.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+  color: black;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.indigo {
+  background-color: indigo;
+}
+
+.violet {
+  background-color: violet;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+  color: black
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pixelate</title>
+    <!-- This gets us our fun 8-bit font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <!-- loads our own CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Pixelate</h1>
+    <div id="custom">
+      <label>Width:</label>
+      <input id="myWidth" maxlength="2">
+      <label>Height:</label>
+      <input id="myHeight" maxlength="2">
+      <button id="create-board">Create board</button>
+    </div>
+    <div>
+      <button id='add-row'>Add a row</button>
+       <!-- added additional paint buttons! -->
+       <button id='remove-row'>Remove a row</button>
+       <button id='add-column'>Add a column</button>
+       <button id='remove-column'>Remove a column</button>
+    </div>
+    <div>
+      <select>
+        <!-- add options here! -->
+        <option value="red">Red</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="indigo">Indigo</option>
+        <option value="violet">Violet</option>
+        <option value="black">Black</option>
+        <option value="white">White</option>
+      </select>
+      <button id="fill-board">Fill board</button>
+      <button id="paint-remainder">Paint remainder</button>
+      <button id="clear-board">Clear board</button>
+    </div>
+    <table>
+    </table>
+  </body>
+  <!-- loads our JavaScript file -->
+  <script type="text/javascript" src="script.js"></script>
+</html>
