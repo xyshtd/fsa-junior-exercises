@@ -1,0 +1,7 @@
+# Tasks
+
+[x] findManagerFor method 
+[x] findCoworkersFor 
+[x] Display employees 
+[x] Display managers 
+[x] Display coworkers 
