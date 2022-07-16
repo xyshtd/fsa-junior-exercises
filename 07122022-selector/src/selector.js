@@ -57,6 +57,40 @@ class ${
     });
     return this;
   }
+  //extra
+  blink(time) {
+    let displayed = true;
+    let self = this;
+    let switchIt = function (displayed) {
+      if (displayed) {
+        self.hide();
+        console.log("inside hide", self.elements[0].style.display)
+        displayed = false;
+      } else {
+        self.show();
+        displayed = true;
+        console.log("inside show", self.elements[0].style.display, displayed)
+      }
+    }
+    setInterval(switchIt, time);
+    clearInterval(500)
+  }
+
+
+
 }
 
+
+
+
+
 //extras
+//npm run playground
+//http://localhost:8080/
+
+/*  
+const classNames = [];
+const randomClassName = classNames[Math.floor(Math.random() * classNames.length)];
+const div = document.querySelector('div');
+div.classList.add(randomClassName);
+*/
