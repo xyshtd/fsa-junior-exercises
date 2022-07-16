@@ -21,8 +21,8 @@ let rowNum = 0;
 //create board
 createBoard.addEventListener('click', () => {
     table.replaceChildren();
-    columnNum = document.getElementById('myWidth').value*1;
-    rowNum = document.getElementById('myHeight').value*1;
+    columnNum = document.getElementById('myWidth').value;
+    rowNum = document.getElementById('myHeight').value;
     for (let i = 0; i < rowNum; i++){
         const tr = document.createElement('tr');
         for (let j = 0; j < columnNum; j++){

@@ -26,8 +26,6 @@ select, button{
 .sm{
     width: 3rem;
     height: 3rem;
-    /*change rectangle to circle*/
-    border-radius: 50%;
 }
 
 .md{

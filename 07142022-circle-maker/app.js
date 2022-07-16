@@ -20,6 +20,7 @@ button.addEventListener('click',()=>{
 container.addEventListener('click',(ev)=>{
     //console.log(ev.target.tagName) -> DIV always uppercase
     //console.log(ev.target.id) -> container
+    //avoid event bubbling
     if (ev.target.id !== 'container'){
         ev.target.parentNode.removeChild(ev.target);}
 })
