@@ -14,7 +14,8 @@ getManagerId = (employeeId,list)=>{
   return list.filter(x => x.id === employeeId)[0].managerId;
 }
 
-//#1find manager by employeeId
+
+//#1 find manager by employeeId
 findManagerFor = (employeeId,list)=>{
   let theManagerId = getManagerId(employeeId,list);
   return list.filter(x => x.id === theManagerId)[0];
@@ -27,15 +28,38 @@ findCoworkersFor = (employeeId,list)=>{
   return list.filter(x => x.managerId === theManagerId && x.id !==employeeId)
 }
 //console.log(findCoworkersFor(2,employees))
-//#3 Display Employees
-const
 
-/* using DOM manipulation display the name each employee in an LI in the UL on the index.html page */ 
+//get Elements
+ul = document.getElementById('employee-list');
+dbButton = document.getElementById('db');
 
+//#3 4 5 Display Employees, Manager, Coworkers
+dbButton.addEventListener('click',()=>{
+  for(let i=0; i<employees.length; i++){
+    let employeeValues = Object.values(employees[i])
+    let employeeID = employeeValues[0]
+    let employeeName = employeeValues[1]
+    let managerID = employeeValues[2]
 
+    const li = document.createElement('li');
+    ul.appendChild(li);
+    li.innerText=employeeName
 
-//TASK 4: Display Managers 
-/* using DOM manipulation and the findManagerFor function, display the managers name of the employee next to the employee in the LI where the employee is displayed */
+    if(managerID) {
+      li.innerText += ` (managed by: ${(findManagerFor(employeeID,employees)).name})`
+    }
+    
+    let coworkers = findCoworkersFor(employeeID,employees) 
+    if(coworkers.length!==0){ 
+     const ul2 = document.createElement('ul');
+     li.appendChild(ul2);
+     for(let i=0; i<coworkers.length; i++){
+        let coWorkerValues = Object.values(coworkers[i])
 
-// Task 5: Display Coworkers
-/* using DOM manipulation display the co-workers of the employee displayed in the LI, in an unordered list which is nested under the LI of the employee */
+        const li2 = document.createElement('li');
+        ul2.appendChild(li2);
+        li2.innerText=coWorkerValues[1]
+        }
+    }
+  }
+},{ once: true })

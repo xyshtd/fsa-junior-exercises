@@ -1,3 +1,18 @@
 body {
-  font-family: verdana;
+  font-family:Montserrat;
+  margin: 2rem;
+  background-color: antiquewhite;
 }
+h1{
+  font-size: 2rem;
+}
+button{
+  font-family: Montserrat;
+}
+
+li{
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+
