@@ -27,7 +27,7 @@ class ${
     });
     return this;
   }
-  //lement.classList.add(), remove(), replace(), toggle()
+  //element.classList.add(), remove(), replace(), toggle()
   //classList: DOMTokenList interface represents a set of space-separated tokens
   addClassName(className){
     this.elements.forEach( elem => {

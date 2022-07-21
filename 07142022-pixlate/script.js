@@ -13,9 +13,6 @@ let pickedColor = 'red';
 let tds =[];
 let columnNum = 0;
 let rowNum = 0;
-//if (!columnNum) columnNum = 0;
-//if (!rowNum) rowNum = 0;
-
 
 
 //create board
@@ -77,7 +74,7 @@ addColumn.addEventListener('click', () => {
     if(columnNum>0){
         columnNum--;
         [...rows].forEach(row => {
-            row.deleteCell(document.createElement('td'));
+            row.deleteCell('td');
         })
     }
     if (!columnNum) {

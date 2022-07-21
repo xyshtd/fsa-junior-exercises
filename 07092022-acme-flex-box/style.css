@@ -91,10 +91,12 @@ input,select{
     justify-content: center;
     margin-top: 1rem;
 }
+
 button{
     padding: 0.2rem 2rem;
     margin: 0.2rem;
 }
+
 #save{
     color: white;
     background-color: dodgerblue;
@@ -104,7 +106,7 @@ button{
 
 #user-cards{
     display: flex;
-    flex-wrap:wrap ;
+    flex-wrap: wrap ;
     text-align: center;
     justify-content: center;  
 }
