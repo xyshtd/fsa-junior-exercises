@@ -11,14 +11,8 @@ const postDetails = require('./views/postDetails');
 //instantiate a new Express app
 const app = express();
 
-/* MiddleWare intercepts all requests; req, res, next; passing control to following middleware using next*/
+
 app.use(morgan('dev'))//'dev' mode optional //app.use(volleyball)
-/* if not use morgan
-app.use((req, res, next) => {
-  console.log(e.g. 'Time:', Date.now())
-  next()
-}) 
-*/
 
 /* Static routing */
 app.use(express.static(path.join(__dirname, 'public')))//app.use(express.static('public'))
@@ -72,4 +66,15 @@ import {html} from 'lit-html'
 package.json add:  "type": "module"
 */
 
+/* Middlewares are in the middle of the client's request and the server's response. middleware have access to the request and response objects and they can modify the request and response for things like adding authentication, request headers, parsing request bodies, handling errors. 
 
+Using app.use() means that this middleware will be called for every call to the application. 
+
+middleware can either terminate the HTTP request or pass it on to another middleware function using next
+
+/* if not use morgan
+app.use((req, res, next) => {
+  console.log(e.g. 'Time:', Date.now())
+  next()
+}) 
+*/
