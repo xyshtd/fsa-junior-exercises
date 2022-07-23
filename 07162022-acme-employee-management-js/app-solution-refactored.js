@@ -10,9 +10,7 @@ const employees = [
 ];
 
 //helper function - get managerId by employeeId
-getManagerId = (employeeId,list)=>{
-  return list.filter(x => x.id === employeeId)[0].managerId;
-}
+
 
 
 //#1 find manager by employeeId

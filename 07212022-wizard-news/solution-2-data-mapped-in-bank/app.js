@@ -4,7 +4,7 @@ const morgan = require('morgan');//const volleyball = require('volleyball')
 const path = require('path');
 
 /* Require Internal Modules  */
-const posts = require('./postBank');
+const postBank = require('./postBank');
 const postList = require('./views/postList');
 const postDetails = require('./views/postDetails');
 
@@ -20,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')))//app.use(express.static(
 /* Express routing */
 //Syntax: app.get("", (req, res) => res.send("Hello World!"));
 app.get('/',(req, res)=>{
+  const posts = postBank.list();
   //refactored: call the postList function to generate the HTML for the response.
   res.send(postList(posts));
 });
@@ -28,7 +29,8 @@ app.get('/',(req, res)=>{
 /* Dynamic routing - Post pages by id 
 using route parameters (req.params)*/
 app.get('/posts/:id', (req, res) => {
-  const post = posts.find(post => post.id === req.params.id*1); 
+  const id = req.params.id;
+  const post = postBank.find(id); 
   res.send(postDetails(post))
 })
 

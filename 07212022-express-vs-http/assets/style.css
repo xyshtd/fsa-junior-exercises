@@ -1,0 +1,17 @@
+body {
+  font-family: verdana;
+}
+nav {
+  padding: 1rem;
+  background-color: dodgerBlue;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: cornSilk;
+  padding: 0.5rem;
+}
+nav a.selected {
+  border: solid 1px cornSilk;
+}

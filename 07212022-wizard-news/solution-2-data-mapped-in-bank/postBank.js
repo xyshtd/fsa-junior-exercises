@@ -16,13 +16,15 @@ const data = [
 ];
 
 
-/* const list = () => {
+const list = () => {
   return [...data] 
 }; 
 
 const find = (id) => {
   const post = data.find(post => post.id === +id);// equals *1
   return {...post};
-} */
+}
 
-module.exports = data;
+module.exports = { 
+  list: list, 
+  find: find };

@@ -1,5 +1,5 @@
 //cat reads current file
-//syntax:fs.readFile( filename, encoding, callback_function (err,data)=>{})
+//syntax:fs.readFile( filename, encoding, callbackfunction (err,data){})
 const fs = require('fs');
 
 module.exports = (fileName, done) => {
