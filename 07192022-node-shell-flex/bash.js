@@ -1,7 +1,7 @@
-/* terminal npm i nodemon: instant refreshing prompt
-json script ->npm start 
-control + c to quit 
-a command prompt is an input field */
+/* nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected: npm i nodemon --save-dev: installing it as a development dependency
+json script "start:dev": "nodemon bash.js" ->npm run start:dev */
+//control + c to quit 
+//a command prompt is an input field
 
 //process global module
 //stdout: standard output -> Output a prompt
@@ -13,7 +13,8 @@ const done = (data) => {
 process.stdout.write('prompt > ');//Output a prompt at front
 
 const main = (data) => {
-  const cmd = data.toString().trim();//convert buffer & remove the newline
+  const entry = data.toString().trim();//convert buffer & remove the newline
+  const [cmd, fileName] = entry.split(' ')//handle multiple arguments
   //switch -case break 
   switch (cmd) {
     case 'pwd':
@@ -23,7 +24,7 @@ const main = (data) => {
       require('./ls')(done);
       break;
     case 'cat':
-      require('./cat')(arg, done);
+      require('./cat')(fileName, done);
       break; 
     case 'date':
       require('./date')(done);

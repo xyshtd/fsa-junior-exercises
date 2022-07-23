@@ -1,9 +1,11 @@
-const fs = require('fs');
 //cat reads current file
+//syntax:fs.readFile( filename, encoding, callback_function (err,data)=>{})
+const fs = require('fs');
+
 module.exports = (fileName, done) => {
   fs.readFile(fileName, 'utf8', (err, data) => {
     if (err) {
-      done(err.stack);// throw err;
+      done(err.stack);
     } else {
       done(data);
     }

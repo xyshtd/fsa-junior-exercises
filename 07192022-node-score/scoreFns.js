@@ -8,3 +8,12 @@ const computeAverage = (scores)=> {
 module.exports = {
   computeAverage
 };
+/* 
+// default export
+module.exports = function defaultExportedFunction() {};
+// named export
+module.exports = {
+  something,
+  anotherThing,
+}; 
+*/
