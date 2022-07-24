@@ -25,3 +25,4 @@ module.exports = function postList(posts) {
   </body>
 </html>`;
 }
+//template literals use the toString() method which by default joins the returned array by map with a comma. Use join('') to avoid this.

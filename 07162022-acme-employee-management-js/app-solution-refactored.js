@@ -15,8 +15,8 @@ const employees = [
 
 //#1 find manager by employeeId
 findManagerFor = (employeeId,list)=>{
-  let theManagerId = getManagerId(employeeId,list);
-  return list.filter(x => x.id === theManagerId)[0];
+  let theManagerId = list.find(x => x.id === ManagerId);
+  return list.filter(x => x.id === theManagerId);
 }
 //console.log(findManagerFor(8,employees))
 

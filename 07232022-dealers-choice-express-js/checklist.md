@@ -1,0 +1,5 @@
+- [ ] GET '/' Shows a **listing** page which contains links for individual items
+- [ ] Links on listing page take user to a **details** page, which shows additional information about the item which was clicked on
+- [ ] A link on the details page allows the user to **get back to the listing page**
+- [ ] A **static route** is used for returning a style sheet for the application
+- [ ] A **custom 404 error** page includes a page not found message and a link to get back to the home page

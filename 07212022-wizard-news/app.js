@@ -6,7 +6,7 @@ const path = require('path');
 /* Require Internal Modules  */
 const posts = require('./postBank');
 const postList = require('./views/postList');
-const postDetails = require('./views/postDetails');
+const pozstDetails = require('./views/postDetails');
 
 //instantiate a new Express app
 const app = express();
@@ -23,17 +23,17 @@ app.get('/',(req, res)=>{
   //refactored: call the postList function to generate the HTML for the response.
   res.send(postList(posts));
 });
-//template literals use the toString() method which by default joins the returned array by map with a comma. Use join('') to avoid this.
 
 /* Dynamic routing - Post pages by id 
 using route parameters (req.params)*/
+//const post = postBank.find(id)
 app.get('/posts/:id', (req, res) => {
   const post = posts.find(post => post.id === req.params.id*1); 
   res.send(postDetails(post))
 })
 
-/* error Handling with inline HTML block*/
-app.get('*', function(req, res, next){
+/* error Handling e.g. with inline HTML block*/
+app.get('*', function(req, res){
   const errorHTML = `<html>
   <head>
     <title>Page Not Found</title>
@@ -49,11 +49,10 @@ app.get('*', function(req, res, next){
   `;
   res.status(404);
   res.send(errorHTML);
-  next()
 });
 
 /* Listen: Set up port and start the server to accept requests */ 
-const PORT = 1337;//3000 univeral open port
+const PORT = process.env.PORT || 1337;//3000 univeral open port
 app.listen(PORT, () => {
   console.log(`App listening in port ${PORT}`);
 });
@@ -72,7 +71,9 @@ middleware can either terminate the HTTP request or pass it on to another middle
 
 /* if not use morgan
 app.use((req, res, next) => {
-  console.log(e.g. 'Time:', Date.now())
+  console.log('middleware called')
   next()
 }) 
 */
+
+//The req.params property is an object containing properties mapped to the named route “parameters”. For example, if you have the route /student/:id, then the “id” property is available as req.params.id. This object defaults to {}.
