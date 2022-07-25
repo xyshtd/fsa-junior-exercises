@@ -2,4 +2,4 @@
 - [x] Links on listing page take user to a **details** page, which shows additional information about the item which was clicked on
 - [x] A link on the details page allows the user to **get back to the listing page**
 - [x] A **static route** is used for returning a style sheet for the application
-- [ ] A **custom 404 error** page includes a page not found message and a link to get back to the home page
+- [x] A **custom 404 error** page includes a page not found message and a link to get back to the home page
