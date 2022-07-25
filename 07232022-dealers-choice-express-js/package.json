@@ -1,0 +1,20 @@
+{
+  "name": "07232022-dealers-choice-express",
+  "version": "1.0.0",
+  "description": "- fork this repo",
+  "main": "movieData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "morgan": "^1.10.0"
+  }
+}

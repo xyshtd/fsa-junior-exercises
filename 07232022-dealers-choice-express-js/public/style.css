@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: 'Poppins';
+    font-weight: 300;
+    color:white;
+  }
+  
+  nav{
+    background-color:orange;
+    padding: 20px 50px;
+    font-size:1rem;
+    font-weight: 500;
+  }
+  nav a{
+    color:white;
+    text-decoration: none;
+  }
+  
+  nav a:hover{
+    color:black;
+    transition: color 0.5s;
+  }
+
+  .listing{
+    line-height: 1.5rem;
+    padding: 0px 10px;
+  }
+
+  li{
+    padding: 10px 0 0 0;
+    list-style: none;
+  }
+  
+  large{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: orange;
+  }
+
+  large a{
+    color: #313131;
+    text-decoration: none;
+  }
+
+  large a:hover{
+    color: orange;
+    transition: 0.5s;
+  }
+
+
+  small{
+    font-size: 14px;
+    color: black;
+  }
+  
+  .hero-image {
+    width: 100%;
+    z-index:0;
+  }
+  .summary {
+    position:fixed;
+    bottom:20%;
+    width:70%; 
+    background-color: black;
+    opacity: 0.9;
+    padding: 5px 50px;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+  }
+  .summary h1{
+    line-height: 1.2em;
+    font-weight:600;
+  }
+  
+  @media (max-width:800px){
+    .summary {
+      bottom: 25%;
+      font-size: 1.1rem;
+      width:60%; 
+    }
+    .summary h1{
+      font-size: 1.7rem;
+    }
+  }
+  
+  @media (max-width:560px){
+  .summary {
+    width:calc(100vw - 40px);
+    bottom:40%; 
+    padding: 0 20px;
+    font-size: 0.9rem;
+    }
+    .summary h1{
+        font-size: 1.4rem;
+      }
+ 
+  }
+  
