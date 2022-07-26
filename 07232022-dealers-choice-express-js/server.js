@@ -70,8 +70,8 @@ app.get('/movies/:rank', (req,res) => {
     <header>
         <nav>
         <a href="/">IMDb Top 10 Movies</a>
-        <a href="/movies/${movie.rank-1}">Previous</a>
-        <a href="/movies/${movie.rank+1}">Next</a>
+        <a href="/movies/${movie.rank !== 1 ? movie.rank-1 : movie.rank}">Previous</a>
+        <a href="/movies/${movie.rank !== 10 ? movie.rank+1 : movie.rank}">Next</a>
         </nav>
     </header>
     <div>
